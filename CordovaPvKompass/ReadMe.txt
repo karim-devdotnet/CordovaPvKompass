@@ -1,0 +1,47 @@
+﻿PM> cordova
+Synopsis
+
+    cordova command [options]
+
+Global Commands
+    create ............................. Create a project
+    help ............................... Get help for a command
+
+Project Commands
+    info ............................... Generate project information
+    requirements ....................... Checks and print out all the requirements
+                                            for platforms specified
+
+    platform ........................... Manage project platforms
+    plugin ............................. Manage project plugins
+
+    prepare ............................ Copy files into platform(s) for building
+    compile ............................ Build platform(s)
+    clean .............................. Cleanup project from build artifacts
+
+    run ................................ Run project
+                                            (including prepare && compile)
+    serve .............................. Run project with a local webserver
+                                            (including prepare)
+
+Learn more about command options using 'cordova help <command>'
+
+Aliases
+    build -> cordova prepare && cordova compile
+    emulate -> cordova run --emulator
+
+Options
+    -v, --version ...................... prints out this utility's version
+    -d, --verbose ...................... debug mode produces verbose log output for all activity,
+    --no-update-notifier ............... disables check for CLI updates
+    --nohooks .......................... suppress executing hooks
+                                         (taking RegExp hook patterns as parameters)
+
+Examples
+    cordova create myApp org.apache.cordova.myApp myApp
+    cordova plugin add cordova-plugin-camera --save
+    cordova platform add android --save
+    cordova requirements android    
+    cordova build android --verbose
+    cordova run android
+    cordova build android --release -- --keystore="..\android.keystore" --storePassword=android --alias=mykey
